@@ -1,9 +1,9 @@
 # backend/server/apps/endpoints/serializers.py file
 from rest_framework import serializers
-from apps.endpoints.models import Endpoint
-from apps.endpoints.models import MLAlgorithm
-from apps.endpoints.models import MLAlgorithmStatus
-from apps.endpoints.models import MLRequest
+from .models import Endpoint
+from .models import MLAlgorithm
+from .models import MLAlgorithmStatus
+from .models import MLRequest
 
 
 class EndpointSerializer(serializers.ModelSerializer):

@@ -1,17 +1,20 @@
 from rest_framework import viewsets
 from rest_framework import mixins
+from rest_framework.exceptions import APIException
 
-from apps.endpoints.models import Endpoint
-from apps.endpoints.serializers import EndpointSerializer
+from django.db import transaction
 
-from apps.endpoints.models import MLAlgorithm
-from apps.endpoints.serializers import MLAlgorithmSerializer
+from .models import Endpoint
+from .serializers import EndpointSerializer
 
-from apps.endpoints.models import MLAlgorithmStatus
-from apps.endpoints.serializers import MLAlgorithmStatusSerializer
+from .models import MLAlgorithm
+from .serializers import MLAlgorithmSerializer
 
-from apps.endpoints.models import MLRequest
-from apps.endpoints.serializers import MLRequestSerializer
+from .models import MLAlgorithmStatus
+from .serializers import MLAlgorithmStatusSerializer
+
+from .models import MLRequest
+from .serializers import MLRequestSerializer
 
 
 class EndpointViewSet(
